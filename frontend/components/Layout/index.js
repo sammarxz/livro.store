@@ -1,16 +1,18 @@
 import React from 'react'
 
 // UI Components
-import Meta from '../Meta'
-import Header from '../Header'
+import { Header, Meta } from '../'
+
+// Global Styles
+import '../../styles/global';
 
 const Layout = ({ children }) => (
- <div className="container">
-   <Meta />
-   <Header />
-   <p>Hey, I'm Layout component</p>
-   { children }
- </div>
+  <>
+    <Meta />
+    <Header />
+    <p>Hey, I'm Layout component</p>
+    { children }
+  </>
 )
 
-export default Layout
+export { Layout }

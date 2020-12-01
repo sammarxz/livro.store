@@ -12,4 +12,4 @@ const Meta = () => (
   </Head>
 )
 
-export default Meta
+export { Meta }
