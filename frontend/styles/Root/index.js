@@ -4,16 +4,17 @@ const Root = css`
   :root {
     --font-size-base: 16px;
     --font-family-base: 'Libre Sans', Roboto, Helvetica, Arial, sans-serif;
+    --font-family-secondary: 'Libre Baskerville', serif;
     --font-line-height-base: 1.5;
 
     --color-background: 255,255,255;
     --color-foreground: 0,0,0;
-    --color-haze: rgb(70, 70, 70);
-    --color-heading: rgb(6, 6, 6);
 
-    --grid-width: 60rem;
+    --color-text: rgb(70, 70, 70);
+
+    --grid-width: 120rem;
     --grid-column: 1;
-    --grid-gutter: 1.25rem;
+    --grid-gutter: 2.25rem;
   }
 
   @media (min-width: 576px) {
@@ -30,12 +31,7 @@ const Root = css`
 
   body {
     background-color: rgb(var(--color-background));
-    padding-left: calc(var(--grid-gutter) / 2);
-    padding-right: calc(var(--grid-gutter) / 2);
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: var(--grid-width);
+    color: rgb(var(--color-text));
     overflow-x: hidden;
   }
 `

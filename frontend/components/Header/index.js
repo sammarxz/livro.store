@@ -1,15 +1,33 @@
 import React from 'react'
 import Link from 'next/link'
+import { FiShoppingBag } from 'react-icons/fi'
+
+import { 
+  Wrapper, 
+  Container, 
+  Logo, 
+  MenuActions,
+  MenuAction
+} from './styles'
 
 const Header = () => (
-  <header>
-    <Link href="/">
-      <a>Home</a>
-    </Link>
-    <Link href="/about">
-      <a>About</a>
-    </Link>
-  </header>
+  <Wrapper>
+    <Container className="d--flex ai--center jc--space-between">
+      <Logo href="/">
+        <a className="ff--secondary">livro<strong>.store</strong></a>
+      </Logo>
+      <MenuActions className="d--flex ai--center jc--space-between">
+        <MenuAction>
+          <FiShoppingBag size="1.6rem" />
+        </MenuAction>
+        <MenuAction>
+          <Link href="/entrar">
+            <a>Entrar</a>
+          </Link>
+        </MenuAction>
+      </MenuActions>
+    </Container>
+  </Wrapper>
 )
 
 export { Header }

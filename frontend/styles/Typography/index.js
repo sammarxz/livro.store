@@ -12,7 +12,6 @@ const Typography = css`
 
   p {
     margin-bottom: 1.15rem;
-    color: rgb(var(--color-foreground));
     font-size: 1em;
   }
 
@@ -28,12 +27,10 @@ const Typography = css`
     margin: 2em 0 1.05em;
     font-weight: 400;
     line-height: var(--font-line-height-base);
-    color: rgb(var(--color-foreground));
   }
 
   h1 {
     font-size: 1.5em;
-    color: var(--color-heading);
     line-height: 1.4;
   }
 
@@ -58,12 +55,10 @@ const Typography = css`
   }
 
   strong {
-    color: rgb(var(--color-foreground));
     font-weight: 600;
   }
 
   em {
-    color: var(--color-haze);
     font-style: normal;
   }
 

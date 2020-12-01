@@ -8,6 +8,8 @@ const Meta = () => (
 
     <title>livro.store - Li. Gostei. Vendi.</title>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/static/nprogress.css" />
   </Head>
 )
