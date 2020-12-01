@@ -9,6 +9,10 @@ const Flex = css`
     align-items: center;
   }
 
+  .ai--start {
+    align-items: flex-start;
+  }
+
   .jc--space-between {
     justify-content: space-between;
   }

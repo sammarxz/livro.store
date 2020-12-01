@@ -1,7 +1,7 @@
 import { Layout } from '../components'
 
 // Global Styles
-import GlobalStyle from '../styles/global';
+import GlobalStyle from '../styles/global'
 
 function MyApp({ Component, pageProps }) {
   return (

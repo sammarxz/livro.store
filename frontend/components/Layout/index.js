@@ -1,7 +1,7 @@
 import React from 'react'
 
 // UI Components
-import { Header, Meta } from '../'
+import { Header, Meta } from '..'
 
 const Layout = ({ children }) => (
   <>

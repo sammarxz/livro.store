@@ -1,25 +1,35 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 
-export const Wrapper = styled.header`
+const Wrapper = styled.header`
   background-color: rgb(var(--color-background));
   position: fixed;
   width: 100%;
-  max-width: 100vw;
-  padding: 1rem 2rem;
+  left: 0;
+  right: 0;
+  padding-left: calc(var(--grid-gutter) / 2);
+  padding-right: calc(var(--grid-gutter) / 2);
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 1.125rem;
+  z-index: 10;
+
+  @media (min-width: 769px) {
+    padding-left: calc(var(--grid-gutter) * 1.2);
+    padding-right: calc(var(--grid-gutter) * 1.2);
+  }
 `
 
-export const Container = styled.div``
+const Container = styled.div``
 
-export const Logo = styled(Link)``
+const Logo = styled(Link)``
 
-export const MenuActions = styled.ul`
+const MenuActions = styled.ul`
   margin: 0;
   padding: 0;
 `
 
-export const MenuAction = styled.li`
+const MenuAction = styled.li`
   list-style: none;
   margin-left: 16px;
 
@@ -27,3 +37,7 @@ export const MenuAction = styled.li`
     transform: translateY(2px);
   }
 `
+
+export {
+  Wrapper, Container, Logo, MenuActions, MenuAction
+}
