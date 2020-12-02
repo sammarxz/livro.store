@@ -1,14 +1,17 @@
 import styled from 'styled-components'
 
 const List = styled.section`
-  padding-top: 70vh;
   flex-wrap: wrap;
+  margin-top: 80px;
+
+  @media (min-width: 630px) {
+    margin-top: 40px;
+  }
 `
 
 const Book = styled.article`
   width: 100%;
   margin-bottom: 2em;
-  cursor: pointer;
 
   &::not(::last-of-type) {
     margin-bottom: 2em;
@@ -22,65 +25,58 @@ const Book = styled.article`
   }
 `
 
+const BookInfo = styled.div`
+  width: 100%;
+
+  .book__buy {
+    flex-direction: column;
+
+    @media (min-width: 769px) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+`
+
 const BookCover = styled.div`
-  background-color: #eee;
-  padding: 90px 0;
+  img {
+    max-width: 100px;
+    max-height: 200px;
+  }
+`
+
+const BookTitle = styled.h2``
+
+const BookAuthor = styled.h4`
+  border: 1px solid var(--color-lightGray);
+  border-radius: 4px;
+  padding: 4px;
+  letter-spacing: 0.2px;
+`
+
+const BookPrice = styled.h3``
+
+const AddToCart = styled.button`
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  padding: 4px 8px;
+  width: 100%;
+  transition: color .3s ease, background-color .3s ease;
 
   &:hover {
-    div {
-      filter: grayscale(0);
-
-      img {
-        filter: drop-shadow(0 5px 5px rgba(0,0,0,.6));
-        transform: scale(.98);
-      }
-    }
+    background-color: var(--color-primary);
+    color: #fff;
   }
 
-  div, div img {
-    transition: all .3s ease;
+  svg {
+    transform: translateY(2px);
   }
 
-  div {
-    padding-bottom: 300px;
-    filter: grayscale(100%);
-    position: relative;
-    width: 100%;
-
-    img {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: 0 auto;
-      max-height: 300px;
-      min-height: 300px;
-      filter: drop-shadow(0 20px 15px rgba(0,0,0,.2));
-      z-index: 2;
-    }
+  @media (min-width: 769px) {
+    width: auto;
   }
-`
-
-const BookInfo = styled.div`
- margin-top: 16px;
-`
-
-const BookTitle = styled.h2`
-  margin: 0;
-  font-size: 1.2rem;
-
-  span {
-    font-size: .8rem;
-    display: block;
-  }
-`
-
-const BookPrice = styled.h3`
-  margin: 0;
-  font-size: 1.2rem;
 `
 
 export {
-  List, Book, BookCover, BookInfo, BookTitle, BookPrice
+  List, Book, BookCover, BookInfo, BookTitle, BookAuthor, BookPrice, AddToCart
 }

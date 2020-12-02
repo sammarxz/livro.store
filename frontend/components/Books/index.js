@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
+import { FiShoppingCart, FiPlus } from 'react-icons/fi'
 
 import {
   List,
@@ -8,7 +9,9 @@ import {
   BookCover,
   BookInfo,
   BookTitle,
-  BookPrice
+  BookAuthor,
+  BookPrice,
+  AddToCart
 } from './styles'
 
 const Books = ({ books }) => (
@@ -17,27 +20,32 @@ const Books = ({ books }) => (
       id, title, author, cover, price
     }) => (
       <Book key={id}>
-        <Link href={`/${id}`}>
-          <>
-            <BookCover>
-              <div>
-                <img src={cover} alt={title} />
-              </div>
+        <div className="d--flex ai--center">
+          <Link href={`/${id}`}>
+            <BookCover className="mr--32">
+              <img src={cover} alt={title} />
             </BookCover>
-            <BookInfo className="d--flex ai--start jc--space-between">
-              <BookTitle>
-                { title }
-                <span>
-                  {' '}
-                  por
-                  {' '}
+          </Link>
+          <BookInfo>
+            <Link href={`/${id}`}>
+              <a href={`/${id}`}>
+                <BookAuthor className="mt--0 mb--0 c--secondary tt--uppercase fw--700 fs--small">
                   { author }
-                </span>
-              </BookTitle>
-              <BookPrice>{ price }</BookPrice>
-            </BookInfo>
-          </>
-        </Link>
+                </BookAuthor>
+                <BookTitle className="mb--0 mt--8 fs--big c--secondary">
+                  { title }
+                </BookTitle>
+              </a>
+            </Link>
+            <div className="book__buy d--flex">
+              <BookPrice className="c--primary fs--medium mt--8 mb--8 mr--16">{ price }</BookPrice>
+              <AddToCart type="button" className="bc--primary c--primary">
+                <FiPlus />
+                <FiShoppingCart />
+              </AddToCart>
+            </div>
+          </BookInfo>
+        </div>
       </Book>
     )) }
   </List>

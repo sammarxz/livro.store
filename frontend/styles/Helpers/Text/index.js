@@ -10,7 +10,7 @@ const Text = css`
   }
 
   .fs--small {
-    font-size: .8rem;
+    font-size: .6rem;
   }
 
   .fs--normal {
@@ -23,6 +23,26 @@ const Text = css`
 
   .fs--big {
     font-size: 1.2rem;
+  }
+
+  .tt--uppercase {
+    text-transform: uppercase;
+  }
+
+  .fw--700 {
+    font-weight: 700; 
+  }
+
+  .fw--600 {
+    font-weight: 600; 
+  }
+
+  .fw--500 {
+    font-weight: 500; 
+  }
+
+  .fw--400 {
+    font-weight: 400; 
   }
 `
 

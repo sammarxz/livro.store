@@ -1,6 +1,14 @@
 import { css } from 'styled-components'
 
 const Colors = css`
+  .bc--primary {
+    border-color: var(--color-primary);
+  }
+
+  .bc--secondary {
+    border-color: var(--color-secondary);
+  }
+
   .bg--primary {
     background-color: var(--color-primary);
   }
@@ -21,6 +29,10 @@ const Colors = css`
     background-color: var(--color-gray);
   }
 
+  .bg--white {
+    background-color: #fff;
+  }
+
   .c--primary {
     color: var(--color-primary);
   }
@@ -35,6 +47,10 @@ const Colors = css`
 
   .c--midGray {
     color: var(--color-midGray);
+  }
+
+  .c--white {
+    color: #fff;
   }
 
   .c--gray {

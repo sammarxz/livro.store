@@ -43,11 +43,13 @@ const Header = () => (
           <BookSearch />
         </MenuAction>
         <MenuAction className="ml--32">
-          <FiShoppingBag size="32px" className="c--secondary" />
+          <button type="button">
+            <FiShoppingBag size="22px" className="c--secondary" />
+          </button>
         </MenuAction>
         <MenuAction className="ml--32">
           <Link href="/sign-in">
-            <FiUser size="32px" className="c--secondary" />
+            <FiUser size="22px" className="c--secondary" />
           </Link>
         </MenuAction>
       </MenuActions>
