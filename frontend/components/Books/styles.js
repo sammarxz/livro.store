@@ -42,6 +42,7 @@ const BookCover = styled.div`
   img {
     max-width: 100px;
     max-height: 200px;
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,.2));
   }
 `
 
