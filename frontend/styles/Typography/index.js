@@ -6,7 +6,7 @@ const Typography = css`
   }
 
   body {
-    font-family: var(--font-family-base);
+    font-family: var(--font-family-primary);
     line-height: var(--font-line-height-base);
   }
 

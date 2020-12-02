@@ -4,7 +4,9 @@ import Reset from './Reset'
 import Root from './Root'
 import Typography from './Typography'
 
-import { Positions, Text, Flex } from './Helpers'
+import {
+  Positions, Text, Flex, Colors, Spacings
+} from './Helpers'
 
 const GlobalStyle = createGlobalStyle`
    /* BASE */
@@ -16,6 +18,8 @@ const GlobalStyle = createGlobalStyle`
    ${Positions}
    ${Text}
    ${Flex}
+   ${Colors}
+   ${Spacings}
 `
 
 export default GlobalStyle

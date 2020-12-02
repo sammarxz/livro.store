@@ -3,16 +3,18 @@ import { css } from 'styled-components'
 const Root = css`
   :root {
     --font-size-base: 16px;
-    --font-family-base: 'Libre Sans', Roboto, Helvetica, Arial, sans-serif;
-    --font-family-secondary: 'Libre Baskerville', serif;
+    --font-family-primary: ${({ theme }) => theme.fonts.primary};
     --font-line-height-base: 1.5;
 
-    --color-background: 255,255,255;
-    --color-foreground: 0,0,0;
+    --color-primary: ${({ theme }) => theme.colors.primary};
+    --color-secondary: ${({ theme }) => theme.colors.secondary};
+    --color-gray: ${({ theme }) => theme.colors.gray};
+    --color-midGray: ${({ theme }) => theme.colors.midGray};
+    --color-lightGray: ${({ theme }) => theme.colors.lightGray};
 
-    --color-text: rgb(70, 70, 70);
+    --color-text: ${({ theme }) => theme.colors.gray};
 
-    --grid-width: 80rem;
+    --grid-width: 60rem;
     --grid-column: 1;
     --grid-gutter: 3.25rem;
   }
@@ -30,7 +32,6 @@ const Root = css`
   }
 
   body {
-    background-color: rgb(var(--color-background));
     color: rgb(var(--color-text));
     overflow-x: hidden;
     width: 100%;
@@ -39,6 +40,10 @@ const Root = css`
     margin-right: auto;
     padding-left: calc(var(--grid-gutter) / 2);
     padding-right: calc(var(--grid-gutter) / 2);
+  }
+
+  a {
+    cursor: pointer;
   }
 `
 

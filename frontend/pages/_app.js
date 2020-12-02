@@ -13,16 +13,15 @@ const theme = {
     lightGray: '#EFEFEF'
   },
   fonts: {
-    primary: 'Inter'
-  },
-  baseMargin: '8px'
+    primary: '"Inter", sans-serif'
+  }
 }
 
-function MyApp({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   return (
     <>
-      <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <Layout>
           <Component {...pageProps} />
         </Layout>
@@ -30,5 +29,3 @@ function MyApp({ Component, pageProps }) {
     </>
   )
 }
-
-export default MyApp
