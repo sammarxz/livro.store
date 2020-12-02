@@ -1,3 +1,5 @@
-const mutations = {};
+// when someone wants push some data
 
-module.exports = mutations;
+const Mutations = {};
+
+module.exports = Mutations;
