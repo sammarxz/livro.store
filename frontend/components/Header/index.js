@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import { FiShoppingBag } from 'react-icons/fi'
+import Router from 'next/router'
+import NProgress from 'nprogress'
 
 import {
   Wrapper,
@@ -9,6 +11,18 @@ import {
   MenuActions,
   MenuAction
 } from './styles'
+
+Router.onRouteChangeStart = () => {
+  NProgress.start()
+}
+
+Router.onRouteChangeComplete = () => {
+  NProgress.done()
+}
+
+Router.ouRouteChangeError = () => {
+  NProgress.done()
+}
 
 const Header = () => (
   <Wrapper>
@@ -24,7 +38,7 @@ const Header = () => (
           <FiShoppingBag size="1.6rem" />
         </MenuAction>
         <MenuAction>
-          <Link href="/entrar">
+          <Link href="/sign-in">
             Entrar
           </Link>
         </MenuAction>

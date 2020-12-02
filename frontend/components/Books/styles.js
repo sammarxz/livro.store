@@ -15,6 +15,7 @@ const Book = styled.article`
   }
 
   @media (min-width: 769px) {
+    margin-bottom: 4em;
     width: calc(
       36% - (var(--grid-width) / var(--grid-column) - var(--grid-gutter)) / 3
     );
